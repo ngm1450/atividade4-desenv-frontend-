@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atividade IV — Desenvolvedor Front-End</title>
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Atividade IV — JavaScript (2 questões)</h1>
+    <p>Preencha as entradas de cada questão e clique em <em>Calcular</em> / <em>Gerar</em>. As saídas aparecem logo abaixo.</p>
+  </header>
+
+  <main class="container">
+
+  <section class="card" id="q6">
+    <header>
+      <h2>1) Calculadora - duas entradas e operador</h2>
+      <span class="badge">4,0 pts</span>
+    </header>
+    <div class="content">
+      <div class="grid cols-2">
+        <div>
+          <label for="q1-n1">Número 1</label>
+          <input id="q1-n1" type="number" step="any" placeholder="Ex.: 12.5" />
+        </div>
+        <div>
+          <label for="q1-n2">Número 2</label>
+          <input id="q1-n2" type="number" step="any" placeholder="Ex.: 3" />
+        </div>
+        <div>
+          <label for="q1-op">Operador</label>
+          <select id="q1-op" aria-label="Operador">
+            <option value="">Selecione…</option>
+            <option value="+">Somar (+)</option>
+            <option value="-">Subtrair (−)</option>
+            <option value="*">Multiplicar (×)</option>
+            <option value="/">Dividir (÷)</option>
+          </select>
+        </div>
+        <div>
+          <label for="q1-res">Resultado</label>
+          <input id="q1-res" type="text" placeholder="Resultado…" readonly />
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-primary" id="q1-calcular">Calcular</button>
+        <button id="q1-limpar">Limpar</button>
+      </div>
+      <div class="out" id="q1-out" aria-live="polite"></div>
+      <p class="hint">Validações: todos os campos são obrigatórios; divisão por zero não é permitida; números muito grandes são rejeitados.</p>
+    </div>
+  </section>
+
+  <section class="card" id="q7">
+    <header>
+      <h2>2) Calculadora de IMC</h2>
+      <span class="badge">6,0 pts</span>
+    </header>
+    <div class="content">
+      <div class="grid cols-2">
+        <div>
+          <label for="q2-altura">Altura (m)</label>
+          <input id="q2-altura" type="number" step="0.01" placeholder="Ex.: 1.75" />
+        </div>
+        <div>
+          <label for="q2-peso">Peso (kg)</label>
+          <input id="q2-peso" type="number" step="0.1" placeholder="Ex.: 70" />
+        </div>
+        <div>
+          <label for="q2-valor">Valor IMC</label>
+          <input id="q2-valor" type="text" placeholder="Resultado…" readonly />
+        </div>
+        <div>
+          <label for="q2-situacao">Situação</label>
+          <input id="q2-situacao" type="text" readonly />
+        </div>
+        <div>
+          <label for="q2-grau">Grau de Obesidade</label>
+          <input id="q2-grau" type="text" readonly />
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-primary" id="q2-calcular">Calcular</button>
+        <button id="q2-limpar">Limpar</button>
+      </div>
+      <div class="out" id="q2-out" aria-live="polite"></div>
+      <h3>Tabela de Classificação</h3>
+      <table class="table" id="q2-tabela">
+        <thead>
+          <tr>
+            <th>Faixa de IMC</th>
+            <th>Situação</th>
+            <th>Grau de Obesidade</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <small>Frontend simples em HTML + JS puro. Separei cada questão em seu próprio arquivo <code class="k">q*.js</code>.</small>
+  </footer>
+
+  <script src="q1.js" defer></script>
+  <script src="q2.js" defer></script>
+
+</body>
+</html>
